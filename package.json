@@ -1,22 +1,32 @@
 {
   "name": "nuxt-app",
-  "private": true,
   "type": "module",
+  "private": true,
+  "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "typecheck": "npx nuxi typecheck"
+    "postinstall": "nuxt prepare && npx simple-git-hooks",
+    "typecheck": "vue-tsc --noEmit",
+    "typecheck:nuxi": "npx nuxi typecheck",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "nuxt": "^3.14.1592",
     "vue": "latest",
     "vue-router": "latest"
   },
-  "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387",
   "devDependencies": {
+    "@antfu/eslint-config": "^3.11.2",
+    "@nuxt/eslint": "^0.7.2",
+    "@unocss/eslint-config": "^0.65.0",
+    "eslint": "^9.16.0",
+    "eslint-plugin-format": "^0.1.3",
+    "lint-staged": "^15.2.10",
+    "simple-git-hooks": "^2.11.1",
     "typescript": "^5.7.2",
     "vue-tsc": "^2.1.10"
   },
@@ -24,5 +34,11 @@
     "patchedDependencies": {
       "vue-tsc@2.1.10": "patches/vue-tsc@2.1.10.patch"
     }
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
