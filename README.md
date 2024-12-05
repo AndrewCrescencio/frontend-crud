@@ -4,6 +4,23 @@
 
 ## Setup
 
+Clone o projeto:
+
+```bash
+git clone https://github.com/AndrewCrescencio/frontend-crud.git
+```
+
+Crie um arquivo `.env` (`.env.example` como exemplo) com as seguintes variáveis: 
+
+```env
+API_BASE_URL=http://localhost:5433
+```
+ou copie o arquivo `.env.example` para `.env`
+
+```bash
+cp .env.example .env
+```
+
 Certifique-se de instalar as dependências:
 
 ```bash
