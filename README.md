@@ -1,10 +1,10 @@
-# Nuxt Minimal Starter
+# Front-end Crud
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[![Preview][product-screenshot]]()
 
 ## Setup
 
-Make sure to install dependencies:
+Certifique-se de instalar as dependências:
 
 ```bash
 # npm
@@ -20,9 +20,27 @@ yarn install
 bun install
 ```
 
-## Development Server
+## JSON Server
 
-Start the development server on `http://localhost:3000`:
+este projeto está usando JSON Server, para iniciar o JSON Server - `http://localhost:5433`:
+
+```bash
+# npm
+npm run json-server
+
+# pnpm
+pnpm json-server
+
+# yarn
+yarn json-server
+
+# bun
+bun run json-server
+```
+
+## Servidor de desenvolvimento
+
+Inicie o servidor de desenvolvimento em `http://localhost:3000`:
 
 ```bash
 # npm
@@ -38,9 +56,9 @@ yarn dev
 bun run dev
 ```
 
-## Production
+## Produção
 
-Build the application for production:
+Crie a versão para produção:
 
 ```bash
 # npm
@@ -56,7 +74,7 @@ yarn build
 bun run build
 ```
 
-Locally preview production build:
+Visualizar versão de produção local:
 
 ```bash
 # npm
@@ -72,4 +90,4 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+[product-screenshot]: preview.webp

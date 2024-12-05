@@ -1,0 +1,70 @@
+.btn {
+  cursor: pointer;
+  padding: 4px 14px;
+  /* color: inherit; */
+  color: var(--color-text);
+  border-color: transparent;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  background-color: var(--color-background);
+
+  box-shadow:
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.1) 0px 8px 10px -6px;
+
+  @media (min-width: 768px) {
+    padding: 10px 20px;
+  }
+}
+
+.btn.icon {
+  cursor: pointer;
+  background-color: transparent;
+  display: block;
+  box-shadow: none;
+}
+
+.btn.primary {
+  background-color: var(--color-primary);
+}
+
+.btn.primary:hover {
+  background-color: var(--color-primary--hover);
+}
+
+.btn.success {
+  background-color: var(--color-success);
+  color: var(--color-white);
+}
+
+.btn.success:hover {
+  background-color: var(--color-success--hover);
+}
+
+.btn.danger {
+  background-color: var(--color-danger);
+  color: var(--color-white);
+}
+
+.btn.danger:hover {
+  background-color: var(--color-danger--hover);
+}
+
+.btn.warning {
+  background-color: var(--color-warning);
+  color: var(--color-black);
+}
+
+.btn.warning:hover {
+  background-color: var(--color-warning--hover);
+}
+
+.btn.info {
+  background-color: var(--color-info);
+}
+
+.btn.info:hover {
+  background-color: var(--color-info--hover);
+}
