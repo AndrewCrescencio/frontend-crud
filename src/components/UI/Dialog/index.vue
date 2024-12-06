@@ -112,7 +112,8 @@ dialog[open] {
 
 dialog {
   border-radius: 4px;
-  /* background-color: red; */
+  background-color: var(--color-background);
+  color: var(--color-text);
   border: transparent;
   padding: 0;
   max-width: 86dvw;
