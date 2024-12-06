@@ -28,7 +28,7 @@
 body {
   color: var(--color-text);
   background-color: var(--color-background);
-
+  color-scheme: light;
   font-family: 'Ubuntu', sans-serif;
 }
 
