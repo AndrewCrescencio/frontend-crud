@@ -25,6 +25,7 @@ function onEdit(payload: User) {
 function onDelete(payload: User) {
   emit('delete', payload)
 }
+const { format } = useFormatCpf()
 </script>
 
 <template>
@@ -44,7 +45,10 @@ function onDelete(payload: User) {
         <template v-if="tableData">
           <tr v-for="(row, index) in tableData" :key="index">
             <td v-for="column in columns" :key="String(column.field)">
-              {{ row[column.field] }}
+              {{
+                column.field === 'cpf'
+                  ? format(row[column.field]) : row[column.field]
+              }}
             </td>
             <td class="actions">
               <button class="btn warning" @click="onEdit(row)">
