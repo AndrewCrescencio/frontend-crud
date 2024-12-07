@@ -13,7 +13,7 @@
     "typecheck:nuxi": "npx nuxi typecheck",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "json-server": "json-server --watch db.json --port 5433"
+    "json-server": "json-server --watch ./data/db.json --port 5433"
   },
   "dependencies": {
     "@formkit/nuxt": "^1.6.9",
