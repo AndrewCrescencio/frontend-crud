@@ -1,0 +1,14 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+RUN corepack enable
+
+EXPOSE 5433
+
+COPY data/db.json ./db.json
+COPY package.json ./package.json
+
+RUN npm install -g json-server
+
+CMD ["npm", "run", "json-server", "--watch", "./db.json", "--port", "5433", "--host", "0.0.0.0"]
