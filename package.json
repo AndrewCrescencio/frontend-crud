@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.11.2",
+    "@cypress/code-coverage": "^3.13.8",
     "@nuxt/eslint": "^0.7.2",
     "@types/vue-the-mask": "^0.11.5",
     "@unocss/eslint-config": "^0.65.0",
@@ -43,6 +44,7 @@
     "simple-git-hooks": "^2.11.1",
     "std-env": "^3.8.0",
     "typescript": "^5.7.2",
+    "vite-plugin-istanbul": "^6.0.2",
     "vue-tsc": "^2.1.10"
   },
   "pnpm": {
