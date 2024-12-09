@@ -1,6 +1,8 @@
 import process from 'node:process'
 import { isDevelopment, isWindows } from 'std-env'
 
+import istanbul from 'vite-plugin-istanbul'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
@@ -22,7 +24,27 @@ export default defineNuxtConfig({
     },
   },
   srcDir: 'src/',
+  sourcemap: {
+    client: true,
+    server: true,
+  },
   compatibilityDate: '2024-11-01',
+  vite: {
+    build: {
+      sourcemap: 'inline',
+    },
+
+    plugins: [
+      istanbul({
+        cypress: true,
+        include: 'src/*',
+        exclude: ['**/*.test.*', '**/*.spec.*', 'node_modules'],
+        extension: ['.js', '.ts'],
+        requireEnv: false,
+        forceBuildInstrument: true,
+      }),
+    ],
+  },
   eslint: {
     config: {
       standalone: false,
