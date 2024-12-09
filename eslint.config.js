@@ -7,6 +7,7 @@ export default nuxt(
     {
       unocss: false,
       formatters: true,
+      ignores: ['instrumented/*', 'coverage/*', 'cypress/*'],
     },
   ),
 )
